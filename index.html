@@ -3,36 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Corinth Canal Stay</title>
-<div style="max-width:900px;margin:40px auto;text-align:center;">
-<!-- CORINTH CANAL VIDEOS -->
+<title>Isthmia.gr | Corinth Canal Stay</title>
 
-<div style="max-width:1200px;margin:40px auto;text-align:center;">
-    <h2>🎥 Experience the Corinth Canal</h2>
-
-    <div style="
-        display:flex;
-        flex-wrap:wrap;
-        gap:20px;
-        justify-content:center;
-    ">
-
-        <iframe
-            width="500"
-            height="889"
-            src="https://www.youtube.com/embed/RdK8pCmMpIQ"
-            title="Corinth Canal Video 1"
-            frameborder="0"
-            allowfullscreen>
-        </iframe>
-
-        <iframe
-            width="500"
-            height="889"
-            src="https   
-body{
+<style>
+*{
     margin:0;
-    font-family:Arial,Helvetica,sans-serif;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
     background:#f5f5f5;
     color:#333;
 }
@@ -44,17 +25,50 @@ body{
 }
 
 .container{
-    max-width:1000px;
+    max-width:1200px;
     margin:auto;
     padding:20px;
 }
 
+h1{
+    text-align:center;
+    font-size:42px;
+    color:#004080;
+    margin:30px 0 15px;
+}
+
+.intro{
+    text-align:center;
+    font-size:20px;
+    line-height:1.7;
+    margin-bottom:40px;
+}
+
+.video-section{
+    text-align:center;
+    margin:40px 0;
+}
+
+.video-grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.video-grid iframe{
+    width:350px;
+    height:620px;
+    border:none;
+    border-radius:12px;
+}
+
 .card{
     background:white;
-    padding:20px;
     margin:30px 0;
-    border-radius:12px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.15);
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 2px 15px rgba(0,0,0,0.15);
 }
 
 .card img{
@@ -62,13 +76,62 @@ body{
     border-radius:10px;
 }
 
-h1,h2{
-    text-align:center;
+.card h2{
+    margin-bottom:20px;
+    color:#004080;
 }
 
-p{
+.contact{
+    background:#ffcc00;
+    padding:40px 20px;
     text-align:center;
-    line-height:1.6;
+    margin-top:40px;
+}
+
+.contact h2{
+    color:#c00000;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.phone{
+    font-size:42px;
+    font-weight:bold;
+    color:#000;
+    margin:20px 0;
+}
+
+.apps{
+    font-size:24px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+.call-btn{
+    display:inline-block;
+    background:#009933;
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:10px;
+    font-size:24px;
+    font-weight:bold;
+    margin-top:20px;
+}
+
+.floating-phone{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#ff3b30;
+    color:white;
+    text-decoration:none;
+    padding:15px 20px;
+    border-radius:12px;
+    font-weight:bold;
+    font-size:20px;
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+    z-index:9999;
 }
 </style>
 </head>
@@ -83,80 +146,79 @@ p{
 
 <h1>Corinth Canal Stay</h1>
 
-<p>
-Discover the breathtaking Corinth Canal and enjoy a comfortable stay just minutes away from one of Greece's most remarkable landmarks.
+<p class="intro">
+Experience the famous Corinth Canal and enjoy comfortable accommodation in Isthmia.
+Perfect for holidays, sightseeing and exploring one of Greece's most impressive landmarks.
 </p>
 
-<div class="card">
-    <h2>Isthmus Filoxenia</h2>
-    <img src="filoxeniagit.JPG" alt="Isthmus Filoxenia">
-    <p>Modern and comfortable accommodation near the Corinth Canal.</p>
+<div class="video-section">
+
+    <h2>🎥 Explore the Corinth Canal</h2>
+
+    <div class="video-grid">
+
+        <iframe
+            src="https://www.youtube.com/embed/RdK8pCmMpIQ"
+            allowfullscreen>
+        </iframe>
+
+        <iframexECs"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+</div>
+
+<divoxenia%20git.JPG
+
+    <p style="margin-top:20px;">
+        Modern and comfortable accommodation near the Corinth Canal.
+    </p>
+
 </div>
 
 <div class="card">
+
     <h2>Isthmus Cuddly Nest</h2>
+
     <img src="cuddlynest.JPG" alt="Isthmus Cuddly Nest">
-    <p>Cozy and relaxing accommodation in the Isthmus area.</p>
+
+    <p style="margin-top:20px;">
+        Cozy and relaxing accommodation in the heart of Isthmia.
+    </p>
+
 </div>
 
 </div>
-<!-- CONTACT SECTION -->
-<div style="
-background: #ffcc00;
-color: #000;
-padding: 40px 20px;
-text-align: center;
-margin-top: 40px;
-border-top: 5px solid #ff6600;
-">
 
-    <h2 style="
-    margin:0;
-    font-size:38px;
-    color:#c00000;
-    ">
-    📞 CONTACT US DIRECTLY
-    </h2>
+<div class="contact">
 
-    <p style="
-    font-size:34px;
-    font-weight:bold;
-    margin:20px 0;
-    ">
-    +30 690 685 4686
+    <h2>📞 CONTACT & RESERVATIONS</h2>
+
+    <div class="phone">
+        +30 690 685 4686
+    </div>
+
+    <div class="apps">
+        ✅ WhatsApp &nbsp;&nbsp;
+        ✅ Viber &nbsp;&nbsp;
+        ✅ Telegram
+    </div>
+
+    <p>
+        Contact us anytime for availability, pricing and reservations.
     </p>
 
-    <p style="
-    font-size:22px;
-    font-weight:bold;
-    ">
-    ✅ WhatsApp &nbsp; ✅ Viber &nbsp; ✅ Telegram
-    </p>
-
-    <p style="font-size:18px;">
-    Contact us anytime for availability, prices, and reservations.
-    </p>
-
-    <a href="tel:+306906854686"
-       style="
-       display:inline-block;
-       background:#d60000;
-       color:white;
-       padding:15px 30px;
-       text-decoration:none;
-       border-radius:8px;
-       font-size:24px;
-       font-weight:bold;
-       margin-top:15px;">
-       CALL NOW
+    tel:+306906854686
+        📞 CALL NOW
     </a>
 
 </div>
 
-<!-- FLOATING PHONE BUTTON -->
-<a href="tel:+306906854686"
-   style="
-   position:fixed;
-   bottom:
+<a class="floating-phone" href=" 685 4686
+</a>
+
 </body>
 </html>
+``
