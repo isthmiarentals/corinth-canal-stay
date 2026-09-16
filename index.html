@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#073744">
+  <meta name="robots" content="index, follow">
+
+  <title>Isthmia.gr | Διαμονή κοντά στον Ισθμό της Κορίνθου</title>
+  <meta name="description" content="Μείνετε στα Isthmus Filoxenia και Isthmus Cuddly Nest, λίγα λεπτά από τον Ισθμό της Κορίνθου. Ιδανική αφετηρία για την Κορινθία και την Πελοπόννησο.">
+  <meta name="keywords" content="διαμονή Ισθμία, Ισθμός Κορίνθου, Isthmus Filoxenia, Isthmus Cuddly Nest, Corinth Canal accommodation">
+  <link rel="canonical" href="https://www.isthmia.gr/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Isthmia.gr | Μείνετε στην καρδιά της Ισθμίας">
+  <meta property="og:description" content="Δύο φιλόξενα καταλύματα, λίγα λεπτά από τον Ισθμό της Κορίνθου.">
+  <meta property="og:url" content="https://www.isthmia.gr/">
+  <meta property="og:image" content="https://www.isthmia.gr/isthmos.jpg">
+
+  <style>
+    :root {
+      --navy:#073744;
+      --blue:#0f7793;
+      --aqua:#4ec4c5;
+      --gold:#f5c45b;
+      --paper:#fbfaf6;
+      --mist:#edf5f3;
+      --white:#fff;
+      --ink:#17262c;
+      --muted:#61747a;
+      --radius:28px;
+      --shadow:0 22px 65px rgba(7,55,68,.14);
+    }
+
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.65;
+    }
+    img { display:block; max-width:100%; }
+    a { color:inherit; }
+    .shell { width:min(1160px,100%); margin:auto; }
+    .section { padding:clamp(70px,9vw,116px) 20px; }
+    .alt { background:var(--mist); }
+
+    .topbar {
+      position:fixed;
+      inset:0 0 auto;
+      z-index:1000;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:13px clamp(16px,4vw,60px);
+      color:#fff;
+      background:linear-gradient(rgba(3,28,36,.9),rgba(3,28,36,.32));
+      backdrop-filter:blur(10px);
+    }
+    .brand { display:flex; align-items:center; gap:10px; text-decoration:none; font-weight:950; letter-spacing:.08em; }
+    .logo { display:grid; place-items:center; width:42px; height:42px; border:1px solid #ffffff88; border-radius:50%; color:var(--gold); background:#ffffff17; }
+    .top-actions { display:flex; align-items:center; gap:9px; }
+    .lang-button { border:0; border-radius:999px; padding:9px 12px; color:#fff; background:#ffffff18; font-weight:900; cursor:pointer; }
+    .lang-button.active { color:var(--navy); background:#fff; }
+    .top-phone { padding:10px 15px; border-radius:999px; color:var(--navy); background:var(--gold); text-decoration:none; font-weight:950; }
+
+    .hero {
+      min-height:100svh;
+      position:relative;
+      display:grid;
+      place-items:center;
+      isolation:isolate;
+      color:#fff;
+      background:url('isthmos.jpg') center/cover no-repeat;
+    }
+    .hero::before { content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(90deg,rgba(2,27,36,.9),rgba(2,27,36,.42)); }
+    .hero-content { width:min(1180px,calc(100% - 40px)); padding:130px 0 110px; }
+    .hero h1 { max-width:900px; margin:15px 0 22px; font:700 clamp(3.1rem,8vw,7rem)/.95 Georgia,serif; letter-spacing:-.05em; }
+    .hero .lead { max-width:760px; font-size:clamp(1.08rem,2vw,1.4rem); }
+
+    .kicker { margin:0 0 8px; color:var(--blue); font-size:.8rem; font-weight:950; letter-spacing:.14em; text-transform:uppercase; }
+    .hero .kicker { display:inline-block; padding:8px 13px; border:1px solid #ffffff77; border-radius:999px; color:#fff; background:#ffffff16; }
+    .heading { max-width:820px; margin:0 auto 45px; text-align:center; }
+    .heading h2 { margin:7px 0 15px; color:var(--navy); font:700 clamp(2.2rem,5vw,4rem)/1.05 Georgia,serif; letter-spacing:-.03em; }
+    .heading p:last-child { color:var(--muted); font-size:1.08rem; }
+
+    .cruise-card { display:flex; align-items:center; gap:34px; padding:clamp(32px,6vw,65px); border-radius:var(--radius); color:#fff; background:linear-gradient(120deg,#073744,#107793); box-shadow:var(--shadow); }
+    .cruise-icon { display:grid; place-items:center; flex:0 0 118px; width:118px; height:118px; border:1px solid #ffffff55; border-radius:50%; font-size:55px; background:#ffffff16; }
+    .cruise-card h2 { margin:5px 0 17px; font:700 clamp(2rem,5vw,3.5rem)/1.08 Georgia,serif; }
+    .cruise-card .kicker { color:#a9efe7; }
+    .cruise-card p:not(.kicker) { color:#ffffffe8; }
+
+    .button-row { display:flex; flex-wrap:wrap; justify-content:center; gap:13px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; min-height:50px; padding:13px 23px; border-radius:999px; text-decoration:none; font-weight:950; transition:transform .2s ease; }
+    .btn:hover { transform:translateY(-2px); }
+    .btn-gold { color:var(--navy); background:var(--gold); box-shadow:0 14px 35px rgba(245,196,91,.25); }
+    .btn-dark { color:#fff; background:var(--navy); }
+    .btn-booking { color:#fff; background:#003b95; }
+    .btn-whatsapp { color:#06402e; background:#79e3a3; }
+    .action-panel { text-align:center; padding:38px 20px; background:#fff; }
+
+    .properties { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; }
+    .property { overflow:hidden; border-radius:var(--radius); background:#fff; box-shadow:var(--shadow); }
+    .property-image { aspect-ratio:4/3; overflow:hidden; background:#dce8e6; }
+    .property-image img { width:100%; height:100%; object-fit:cover; transition:transform .45s ease; }
+    .property:hover img { transform:scale(1.035); }
+    .property-body { padding:28px; }
+    .property h3 { margin:15px 0 8px; color:var(--navy); font:700 2rem/1.1 Georgia,serif; }
+    .property p { color:var(--muted); }
+    .badge { display:inline-block; padding:7px 11px; border-radius:999px; color:#10614f; background:#e6f6f1; font-size:.88rem; font-weight:900; }
+    .amenities { display:flex; flex-wrap:wrap; gap:8px; margin:18px 0 25px; }
+    .amenities span { padding:7px 10px; border-radius:999px; background:#f1f5f4; font-size:.86rem; font-weight:800; }
+
+    .video-stack { width:min(410px,100%); margin:auto; display:grid; gap:25px; }
+    .video-card { padding:11px; border-radius:var(--radius); background:#fff; box-shadow:var(--shadow); }
+    .video-card iframe { display:block; width:100%; aspect-ratio:9/16; max-height:610px; border:0; border-radius:19px; background:#000; }
+
+    .apps-panel { text-align:center; }
+    .large-phone { display:block; margin:15px 0 5px; color:var(--navy); text-decoration:none; font-size:clamp(1.8rem,5vw,3.1rem); font-weight:950; }
+    .apps { font-weight:900; letter-spacing:.03em; }
+
+    .contact { color:#fff; text-align:center; background:linear-gradient(135deg,#052e3b,#0d718b); }
+    .contact .kicker { color:#a9efe7; }
+    .contact h2 { margin:7px 0 12px; font:700 clamp(2.4rem,6vw,4.5rem)/1.05 Georgia,serif; }
+    .contact .large-phone { color:var(--gold); }
+
+    .counter { width:min(620px,100%); margin:auto; padding:30px; border-radius:var(--radius); text-align:center; background:#fff; box-shadow:var(--shadow); }
+    .counter h2 { color:var(--navy); }
+    .counter img { display:inline-block; }
+    .note { color:var(--muted); font-size:.9rem; }
+
+    footer { padding:28px 20px 90px; text-align:center; color:#d7e8e6; background:#031f29; }
+    .floating-call { position:fixed; right:18px; bottom:18px; z-index:1200; padding:13px 18px; border-radius:999px; color:var(--navy); background:var(--gold); text-decoration:none; font-weight:950; box-shadow:0 16px 42px #0005; }
+
+    [data-lang] { display:none; }
+    html[lang="el"] [data-lang="el"], html[lang="en"] [data-lang="en"] { display:revert; }
+
+    @media(max-width:820px) {
+      .properties { grid-template-columns:1fr; }
+      .cruise-card { flex-direction:column; text-align:center; }
+      .top-phone { display:none; }
+      .hero::before { background:#021b24aa; }
+    }
+    @media(max-width:520px) {
+      .brand-text { display:none; }
+      .button-row .btn { width:100%; }
+      .floating-call { left:16px; right:16px; text-align:center; }
+      .property-body { padding:22px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Isthmia.gr"><span class="logo">Ι</span><span class="brand-text">ISTHMIA.GR</span></a>
+    <div class="top-actions">
+      <button class="lang-button active" type="button" data-set-lang="el">ΕΛ</button>
+      <button class="lang-button" type="button" data-set-lang="en">EN</button>
+      <a class="top-phone" href="tel:+306906854686">+30 690 685 4686</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Κεντρική φωτογραφία isthmos.jpg -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <!-- 2. Ζήστε την εμπειρία -->
+        <p class="kicker" data-lang="el">Ζήστε την εμπειρία</p>
+        <p class="kicker" data-lang="en">Live the experience</p>
+
+        <!-- 3. Μείνετε στην καρδιά της Ισθμίας -->
+        <h1 data-lang="el">Μείνετε στην καρδιά της Ισθμίας</h1>
+        <h1 data-lang="en">Stay at the heart of Isthmia</h1>
+        <p class="lead" data-lang="el">Δύο φιλόξενα καταλύματα, λίγα λεπτά από τον Ισθμό της Κορίνθου. Η ιδανική αφετηρία για να γνωρίσετε την Κορινθία και την Πελοπόννησο.</p>
+        <p class="lead" data-lang="en">Two welcoming stays, minutes from the Corinth Canal. The ideal starting point for discovering Corinthia and the Peloponnese.</p>
+      </div>
+    </section>
+
+    <!-- 4. Ο Ισθμός σε κίνηση -->
+    <section class="section">
+      <div class="shell">
+        <div class="heading">
+          <p class="kicker" data-lang="el">ΖΗΣΤΕ ΤΗΝ ΕΜΠΕΙΡΙΑ</p>
+          <p class="kicker" data-lang="en">LIVE THE EXPERIENCE</p>
+          <h2 data-lang="el">Ο Ισθμός σε κίνηση</h2>
+          <h2 data-lang="en">The canal in motion</h2>
+          <p data-lang="el">Δείτε πλοία να διασχίζουν ένα από τα πιο εντυπωσιακά τεχνικά έργα της Ελλάδας.</p>
+          <p data-lang="en">Watch vessels pass through one of Greece's most impressive engineering landmarks.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Κράτηση για τον διάπλου -->
+    <section class="section alt" id="canal-cruise">
+      <div class="shell">
+        <div class="cruise-card">
+          <div class="cruise-icon" aria-hidden="true">⛵</div>
+          <div>
+            <p class="kicker" data-lang="el">ΜΙΑ ΜΟΝΑΔΙΚΗ ΕΜΠΕΙΡΙΑ</p>
+            <p class="kicker" data-lang="en">A UNIQUE EXPERIENCE</p>
+            <h2 data-lang="el">Κάντε κράτηση για τον διάπλου του Ισθμού με καραβάκι</h2>
+            <h2 data-lang="en">Book a boat trip through the Corinth Canal</h2>
+            <p data-lang="el">Ανακαλύψτε τον εντυπωσιακό Ισθμό της Κορίνθου από μια μοναδική οπτική. Απολαύστε τον διάπλου με καραβάκι και θαυμάστε από κοντά τα επιβλητικά κάθετα τοιχώματα του καναλιού.</p>
+            <p data-lang="en">Discover the spectacular Corinth Canal from a unique perspective. Enjoy a boat trip through the canal and admire its impressive vertical walls up close.</p>
+            <a class="btn btn-gold" href="#contact" data-lang="el">Ρωτήστε μας για κράτηση</a>
+            <a class="btn btn-gold" href="#contact" data-lang="en">Ask us about booking</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Κουμπιά -->
+    <section class="action-panel">
+      <div class="button-row">
+        <a class="btn btn-dark" href="#stays" data-lang="el">Δείτε τα καταλύματα</a>
+        <a class="btn btn-dark" href="#stays" data-lang="en">Explore our stays</a>
+        <a class="btn btn-gold" href="tel:+306906854686" data-lang="el">Καλέστε τώρα</a>
+        <a class="btn btn-gold" href="tel:+306906854686" data-lang="en">Call now</a>
+      </div>
+    </section>
+
+    <!-- 7. Διαμονή με χαρακτήρα -->
+    <section class="section" id="stays">
+      <div class="shell">
+        <div class="heading">
+          <p class="kicker" data-lang="el">ΔΙΑΜΟΝΗ ΜΕ ΧΑΡΑΚΤΗΡΑ</p>
+          <p class="kicker" data-lang="en">STAYS WITH CHARACTER</p>
+          <h2 data-lang="el">Επιλέξτε το ιδανικό κατάλυμα</h2>
+          <h2 data-lang="en">Choose your ideal stay</h2>
+          <p data-lang="el">Άνεση, καθαριότητα και προσωπική φιλοξενία σε προνομιακό σημείο κοντά στον Ισθμό.</p>
+          <p data-lang="en">Comfort, cleanliness and personal hospitality in a privileged location near the canal.</p>
+        </div>
+
+        <div class="properties">
+          <!-- 8. Isthmus Filoxenia -->
+          <article class="property">
+            <div class="property-image"><img src="filoxeniagit.JPG" alt="Isthmus Filoxenia accommodation" loading="lazy"></div>
+            <div class="property-body">
+              <span class="badge" data-lang="el">Εξαιρετική επιλογή</span>
+              <span class="badge" data-lang="en">Exceptional choice</span>
+              <h3>Isthmus Filoxenia</h3>
+              <p data-lang="el">Ένα ευρύχωρο, σύγχρονο κατάλυμα για οικογένειες, ζευγάρια και ταξιδιώτες που θέλουν άνεση και εύκολη πρόσβαση στα αξιοθέατα της περιοχής.</p>
+              <p data-lang="en">A spacious, modern stay for families, couples and travellers seeking comfort and easy access to local attractions.</p>
+              <div class="amenities"><span>Wi-Fi</span><span>Parking</span><span>Kitchen</span><span>Air conditioning</span><span>Garden</span></div>
+              <a class="btn btn-booking" href="https://www.booking.com/hotel/gr/isthmus-filoxenia.html" target="_blank" rel="noopener noreferrer" data-lang="el">Δείτε το στο Booking.com</a>
+              <a class="btn btn-booking" href="https://www.booking.com/hotel/gr/isthmus-filoxenia.html" target="_blank" rel="noopener noreferrer" data-lang="en">View on Booking.com</a>
+            </div>
+          </article>
+
+          <!-- 9. Isthmus Cuddly Nest -->
+          <article class="property">
+            <div class="property-image"><img src="cuddlynest.JPG" alt="Isthmus Cuddly Nest accommodation" loading="lazy"></div>
+            <div class="property-body">
+              <span class="badge" data-lang="el">Ζεστή και άνετη διαμονή</span>
+              <span class="badge" data-lang="en">Warm and comfortable stay</span>
+              <h3>Isthmus Cuddly Nest</h3>
+              <p data-lang="el">Ένα περιποιημένο και φιλόξενο καταφύγιο, ιδανικό για σύντομες αποδράσεις, ζευγάρια και ταξιδιώτες που εξερευνούν την Κορινθία.</p>
+              <p data-lang="en">A carefully prepared and welcoming retreat, ideal for short breaks, couples and travellers exploring Corinthia.</p>
+              <div class="amenities"><span>Wi-Fi</span><span>Parking</span><span>Kitchen</span><span>Air conditioning</span><span>Terrace</span></div>
+              <a class="btn btn-booking" href="https://www.booking.com/hotel/gr/e-pholitsa-tou-isthmou.html" target="_blank" rel="noopener noreferrer" data-lang="el">Δείτε το στο Booking.com</a>
+              <a class="btn btn-booking" href="https://www.booking.com/hotel/gr/e-pholitsa-tou-isthmou.html" target="_blank" rel="noopener noreferrer" data-lang="en">View on Booking.com</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Δύο YouTube βίντεο -->
+    <section class="section alt" id="videos">
+      <div class="shell">
+        <div class="video-stack">
+          <div class="video-card"><iframe src="https://www.youtube-nocookie.com/embed/RdK8pCmMpIQ" title="Corinth Canal video 1" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+          <div class="video-card"><iframe src="https://www.youtube-nocookie.com/embed/8Kwv_LWxECs" title="Corinth Canal video 2" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Τηλέφωνο, WhatsApp, Viber και Telegram -->
+    <section class="section apps-panel">
+      <div class="shell">
+        <a class="large-phone" href="tel:+306906854686">+30 690 685 4686</a>
+        <p class="apps">WhatsApp • Viber • Telegram</p>
+      </div>
+    </section>
+
+    <!-- 12 και 13. Άμεση επικοινωνία, τηλέφωνο και WhatsApp -->
+    <section class="section contact" id="contact">
+      <div class="shell">
+        <p class="kicker" data-lang="el">ΑΜΕΣΗ ΕΠΙΚΟΙΝΩΝΙΑ</p>
+        <p class="kicker" data-lang="en">DIRECT CONTACT</p>
+        <h2 data-lang="el">Ας οργανώσουμε τη διαμονή σας</h2>
+        <h2 data-lang="en">Let us arrange your stay</h2>
+        <p data-lang="el">Επικοινωνήστε μαζί μας για διαθεσιμότητα, πληροφορίες και τοπικές προτάσεις.</p>
+        <p data-lang="en">Contact us for availability, information and local recommendations.</p>
+        <a class="large-phone" href="tel:+306906854686">+30 690 685 4686</a>
+        <p class="apps">WhatsApp • Viber • Telegram</p>
+        <div class="button-row">
+          <a class="btn btn-whatsapp" href="https://wa.me/306906854686" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a class="btn btn-gold" href="tel:+306906854686" data-lang="el">Τηλεφωνική κλήση</a>
+          <a class="btn btn-gold" href="tel:+306906854686" data-lang="en">Phone call</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. Visitor Flag Counter -->
+    <section class="section alt" id="visitors">
+      <div class="counter">
+        <h2 data-lang="el">🌍 Επισκέπτες από όλο τον κόσμο</h2>
+        <h2 data-lang="en">🌍 Visitors from around the world</h2>
+        <a href="https://info.flagcounter.com/NN4s" target="_blank" rel="noopener noreferrer" aria-label="Visitor statistics">
+          <img src="https://s01.flagcounter.com/count2/NN4s/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" loading="lazy">
+        </a>
+        <p class="note" data-lang="el">Ο μετρητής παρέχεται από εξωτερική υπηρεσία και ενδέχεται να απαιτεί αποδοχή cookies ή απενεργοποίηση αποκλεισμού περιεχομένου.</p>
+        <p class="note" data-lang="en">The counter is provided by an external service and may require cookies or content blocking to be disabled.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Isthmia.gr • Isthmus Filoxenia &amp; Isthmus Cuddly Nest</footer>
+  <a class="floating-call" href="tel:+306906854686"><span data-lang="el">☎ Καλέστε τώρα</span><span data-lang="en">☎ Call now</span></a>
+
+  <script>
+    const root = document.documentElement;
+    const languageButtons = document.querySelectorAll('[data-set-lang]');
+    function setLanguage(language) {
+      root.lang = language;
+      localStorage.setItem('isthmia-language', language);
+      languageButtons.forEach(button => button.classList.toggle('active', button.dataset.setLang === language));
+      document.title = language === 'el'
+        ? 'Isthmia.gr | Διαμονή κοντά στον Ισθμό της Κορίνθου'
+        : 'Isthmia.gr | Accommodation near the Corinth Canal';
+    }
+    languageButtons.forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.setLang)));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    setLanguage(localStorage.getItem('isthmia-language') || 'el');
+  </script>
+</body>
+</html>
