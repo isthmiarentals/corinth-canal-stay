@@ -344,6 +344,74 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition: none !important; }
     }
+
+    /* CORINTH CANAL CRUISE */
+    .cruise-card {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      padding: clamp(32px, 6vw, 65px);
+      border-radius: var(--radius);
+      color: var(--white);
+      background: linear-gradient(120deg, rgba(6, 47, 61, .98), rgba(14, 113, 144, .92));
+      box-shadow: var(--shadow);
+    }
+    .cruise-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 88% 15%, rgba(255,255,255,.14), transparent 30%);
+      pointer-events: none;
+    }
+    .cruise-icon {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      place-items: center;
+      flex: 0 0 120px;
+      width: 120px;
+      height: 120px;
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 50%;
+      font-size: 58px;
+      background: rgba(255,255,255,.12);
+      backdrop-filter: blur(8px);
+    }
+    .cruise-content {
+      position: relative;
+      z-index: 1;
+      max-width: 790px;
+    }
+    .cruise-content .kicker { color: #9fe7df; }
+    .cruise-content h2 {
+      margin: 0 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 5vw, 3.6rem);
+      line-height: 1.08;
+    }
+    .cruise-content p:not(.kicker) {
+      margin: 0 0 25px;
+      color: rgba(255,255,255,.9);
+      font-size: 1.08rem;
+    }
+    .cruise-btn {
+      color: var(--navy);
+      background: var(--gold);
+      box-shadow: 0 14px 35px rgba(244,191,85,.25);
+    }
+    @media (max-width: 700px) {
+      .cruise-card { flex-direction: column; text-align: center; }
+      .cruise-icon {
+        flex-basis: 95px;
+        width: 95px;
+        height: 95px;
+        font-size: 46px;
+      }
+    }
+    /* END CORINTH CANAL CRUISE */
+
   </style>
 </head>
 <body>
@@ -384,6 +452,30 @@
         <p class="hero-contact"><strong>+30 690 685 4686</strong><br>WhatsApp • Viber • Telegram</p>
       </div>
     </section>
+
+
+    <!-- CORINTH CANAL BOAT TRIP -->
+    <section class="section" id="canal-cruise">
+      <div class="shell">
+        <div class="cruise-card">
+          <div class="cruise-icon" aria-hidden="true">⛵</div>
+          <div class="cruise-content">
+            <p class="kicker" data-lang="el">ΜΙΑ ΜΟΝΑΔΙΚΗ ΕΜΠΕΙΡΙΑ</p>
+            <p class="kicker" data-lang="en">A UNIQUE EXPERIENCE</p>
+
+            <h2 data-lang="el">Κάντε κράτηση για τον διάπλου του Ισθμού με καραβάκι</h2>
+            <h2 data-lang="en">Book a boat trip through the Corinth Canal</h2>
+
+            <p data-lang="el">Ανακαλύψτε τον εντυπωσιακό Ισθμό της Κορίνθου από μια μοναδική οπτική. Απολαύστε τον διάπλου με καραβάκι και θαυμάστε από κοντά τα επιβλητικά κάθετα τοιχώματα του καναλιού.</p>
+            <p data-lang="en">Discover the spectacular Corinth Canal from a unique perspective. Enjoy a boat trip through the canal and admire its impressive vertical walls from up close.</p>
+
+            <a class="btn cruise-btn" href="#contact" data-lang="el">Ρωτήστε μας για κράτηση</a>
+            <a class="btn cruise-btn" href="#contact" data-lang="en">Ask us about booking</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END CORINTH CANAL BOAT TRIP -->
 
     <section class="section" id="videos">
       <div class="shell">
