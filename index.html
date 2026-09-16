@@ -1,107 +1,80 @@
-<!-- HERO EXPERIENCE SECTION -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-<section style="
-background:#ffffff;
-padding:60px 20px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Isthmia.gr | Corinth Canal Accommodation</title>
+
+<meta name="description" content="Stay near the Corinth Canal at Isthmus Filoxenia and Isthmus Cuddly Nest. The perfect base for exploring Corinthia, Ancient Corinth, Loutraki, Epidaurus and the Peloponnese.">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#f5f5f5;
+color:#333;
+line-height:1.7;
+}
+
+.hero{
+background:url('isthmos.jpg') center center/cover no-repeat;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
 text-align:center;
-">
+}
 
-<h1 style="
-font-size:48px;
-color:#003366;
-margin-bottom:20px;
-">
-Welcome to Isthmia
-</h1>
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
+}
 
-<p style="
+.hero-content{
+position:relative;
+z-index:2;
+color:white;
+padding:20px;
 max-width:1000px;
-margin:auto;
-font-size:22px;
-line-height:1.8;
-color:#555;
-">
-Discover the world-famous Corinth Canal and experience one of Greece's most unique destinations.
-Perfectly located between Athens and the Peloponnese, Isthmia is the ideal base for exploring Ancient Corinth,
-Loutraki, Epidaurus, Mycenae, beautiful beaches and the wider Corinthia region.
-</p>
+}
 
-<div style="margin-top:50px;">
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+}
 
-<h2 style="
-color:#004080;
-font-size:32px;
-margin-bottom:25px;
-">
-🚢 Experience the Corinth Canal
-</h2>
+.hero p{
+font-size:1.3rem;
+margin-bottom:20px;
+}
 
-<p style="
-max-width:900px;
-margin:auto;
-font-size:18px;
-line-height:1.8;
-margin-bottom:40px;
-">
-Watch ships crossing the spectacular Corinth Canal and discover why thousands of visitors choose Isthmia as their gateway to the Peloponnese.
-</p>
+.phone{
+font-size:2rem;
+font-weight:bold;
+color:#FFD700;
+margin:20px 0;
+}
 
-<iframe
-width="260"
-height="462"
-src="https://www.youtube.com/embed/RdK8pCmMpIQ"
-title="Corinth Canal Video"
-style="border:none;border-radius:12px;">
-</iframe>
+.apps{
+font-size:1.2rem;
+margin-bottom:20px;
+}
 
-<br><br>
-
-<iframe
-width="260"
-height="462"
-src="https://www.youtube.com/embed/8Kwv_LWxECs"
-title="Corinth Canal Video"
-style="border:none;border-radius:12px;">
-</iframe>
-
-</div>
-
-</section>
-
-<!-- APARTMENTS SECTION -->
-
-<section style="
-padding:60px 20px;
-background:#f7f8fb;
-">
-
-<h2 style="
-font-size:36px;
-text-align:center;
-color:#003366;
-margin-bottom:50px;
-">
-Discover Your Ideal Stay in Isthmia
-</h2>
-
-<div class="property">
-
-<h2>Isthmus Filoxenia</h2>
-
-<img src="filoxeniagit.JPG" alt="Isthmus Filoxenia">
-
-<p style="
-font-size:18px;
-line-height:1.8;
-margin-top:20px;
-">
-A spacious and elegant accommodation designed for comfort and relaxation.
-Perfect for families, couples and travelers seeking a premium stay near the Corinth Canal.
-</p>
-
-<a href="https://www.booking.com/hotel/gr/isthmus-filoxenia.html"
-target="_blank"
-style="
+.btn{
 display:inline-block;
 background:#003b95;
 color:white;
@@ -109,8 +82,200 @@ padding:15px 30px;
 text-decoration:none;
 border-radius:10px;
 font-weight:bold;
-margin-top:20px;
-">
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:50px 20px;
+}
+
+.section-title{
+text-align:center;
+font-size:2.2rem;
+margin-bottom:20px;
+color:#003366;
+}
+
+.section-text{
+text-align:center;
+max-width:900px;
+margin:auto;
+margin-bottom:40px;
+font-size:1.1rem;
+}
+
+.video-section{
+text-align:center;
+}
+
+.video-section iframe{
+border:none;
+border-radius:12px;
+margin:15px;
+}
+
+.property{
+background:white;
+padding:25px;
+margin:30px 0;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+.property img{
+width:100%;
+border-radius:10px;
+}
+
+.property h2{
+margin:20px 0;
+text-align:center;
+}
+
+.property p{
+margin-bottom:20px;
+}
+
+.counter{
+text-align:center;
+padding:40px 0;
+}
+
+.contact{
+background:#FFD700;
+text-align:center;
+padding:60px 20px;
+}
+
+.contact h2{
+font-size:2.5rem;
+margin-bottom:15px;
+}
+
+.contact-phone{
+font-size:2.5rem;
+font-weight:bold;
+color:#c00000;
+margin:20px 0;
+}
+
+.floating-call{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#ff3b30;
+color:white;
+padding:15px 20px;
+border-radius:12px;
+text-decoration:none;
+font-weight:bold;
+z-index:9999;
+box-shadow:0 0 15px rgba(0,0,0,0.3);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.8rem;
+}
+
+.video-section iframe{
+width:250px;
+height:444px;
+}
+
+.contact-phone{
+font-size:1.8rem;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>ISTHMIA.GR</h1>
+
+<p>
+The Perfect Gateway to Corinthia
+</p>
+
+<p>
+Ο ιδανικός προορισμός για να εξερευνήσετε τον Ισθμό της Κορίνθου,
+την Αρχαία Κόρινθο, το Λουτράκι, την Επίδαυρο,
+τις Μυκήνες και ολόκληρη την Κορινθία.
+</p>
+
+<div class="phone">
+📞 +30 690 685 4686
+</div>
+
+<div class="apps">
+✅ WhatsApp &nbsp; ✅ Viber &nbsp; ✅ Telegram
+</div>
+
+tel:+306906854686
+CALL NOW
+</a>
+
+</div>
+
+</section>
+
+<div class="container">
+
+<h2 class="section-title">
+Welcome to Isthmia | Καλώς ήρθατε στην Ισθμία
+</h2>
+
+<p class="section-text">
+Stay near the world-famous Corinth Canal and discover one of the most strategic
+locations in Greece for sightseeing, beaches, history and unforgettable experiences.
+</p>
+
+<h2 class="section-title">
+🎥 Experience the Corinth Canal
+</h2>
+
+<div class="video-section">
+
+<iframe
+width="260"
+height="462"
+src="https://www.youtube.com/embed/RdK8pCmMpIQ"
+allowfullscreen>
+</iframe>
+
+<br>
+
+<iframe
+width="260"
+height="462"
+src="https://www.youtube.com/embed/8Kwv_LWxECs"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<div class="property">
+
+<h2>Isthmus Filoxenia</h2>
+
+<img src="filoxeniagit.JPG" alt="Isthmus Filoxenia">
+
+<p>
+A spacious and comfortable accommodation ideal for families,
+couples and travelers exploring Corinthia and the Peloponnese.
+</p>
+
+<a class="btn"
+href="https://www.booking.com/hotel/gr/isthmus-filoxenia.html"
+target="_blank">
 Book on Booking.com
 </a>
 
@@ -122,63 +287,70 @@ Book on Booking.com
 
 <img src="cuddlynest.JPG" alt="Isthmus Cuddly Nest">
 
-<p style="
-font-size:18px;
-line-height:1.8;
-margin-top:20px;
-">
-A cozy and welcoming retreat just minutes from the Corinth Canal.
-Ideal for romantic escapes, short getaways and exploring the hidden treasures of Corinthia.
+<p>
+A cozy and welcoming retreat offering comfort,
+relaxation and easy access to all major attractions of the area.
 </p>
 
-<a href="https://www.booking.com/hotel/gr/e-pholitsa-tou-isthmou.html"
-target="_blank"
-style="
-display:inline-block;
-background:#003b95;
-color:white;
-padding:15px 30px;
-text-decoration:none;
-border-radius:10px;
-font-weight:bold;
-margin-top:20px;
-">
+<a class="btn"
+href="https://www.booking.com/hotel/gr/e-pholitsa-tou-isthmou.html"
+target="_blank">
 Book on Booking.com
 </a>
 
 </div>
 
-</section>
-
-<!-- WHY ISTHMIA -->
-
-<section style="
-padding:70px 20px;
-background:white;
-text-align:center;
-">
-
-<h2 style="
-font-size:36px;
-color:#003366;
-">
+<h2 class="section-title">
 Why Stay in Isthmia?
 </h2>
 
-<p style="
-max-width:1000px;
-margin:auto;
-font-size:20px;
-line-height:2;
-">
-✓ Corinth Canal<br>
-✓ Ancient Corinth<br>
-✓ Loutraki Beaches<br>
-✓ Epidaurus Theatre<br>
-✓ Mycenae Archaeological Site<br>
-✓ Peloponnese Road Trips<br>
-✓ Traditional Greek Villages<br>
-✓ Perfect Location Between Athens & Peloponnese
+<p class="section-text">
+✅ Corinth Canal<br>
+✅ Ancient Corinth<br>
+✅ Loutraki Beaches<br>
+✅ Epidaurus Theatre<br>
+✅ Mycenae Archaeological Site<br>
+✅ Easy access from Athens Airport<br>
+✅ Ideal base for exploring the Peloponnese
+</p>
+
+<div class="counter">
+
+<h2>
+🌍 Visitors From Around The World
+</h2>
+
+<a href="https://info.flagcounter.com/NN4s">
+<img src="https://s01.flagcounter.com/count2/NN4s/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/"
+alt="Flag Counter">
+</a>
+
+</div>
+
+</div>
+
+<section class="contact">
+
+<h2>
+📞 Contact & Reservations
+</h2>
+
+<div class="contact-phone">
++30 690 685 4686
+</div>
+
+<p>
+WhatsApp • Viber • Telegram
+</p>
+
+<p>
+Contact us directly for availability, reservations and local recommendations.
 </p>
 
 </section>
+
+<a class="floating-call" 
+</a>
+
+</body>
+</html>
